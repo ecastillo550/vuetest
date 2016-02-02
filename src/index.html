@@ -2,11 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>test</title>{% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sisse</title>{% for (var css in o.htmlWebpackPlugin.files.css) { %}
     <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">{% } %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.min.css" rel="stylesheet">
   </head>
   <body>
     <app></app>{% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
     <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>{% } %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.js"></script>
   </body>
 </html>
